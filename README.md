@@ -1,11 +1,33 @@
 # Rotten Tomatoes REST API for .NET
 
-A simple C# wrapper for the HTTP-based Rotten Tomatoes API, which you can learn about at http://developer.rottentomatoes.com/
-
-## Features
-
-features here.
+A simple C# wrapper for the HTTP-based Rotten Tomatoes API, which you can learn about at http://developer.rottentomatoes.com/docs/read/JSON
 
 ## Examples
 
-examples here.
+#### Search for movies
+
+    var rtClient = new RottenTomatoesRestClient("myApiKey");
+    
+    var wolverineMovies = rtClient.MoviesSearch("the wolverine");
+    
+#### Find similar movies
+
+    var rtClient = new RottenTomatoesRestClient("myApiKey");
+    
+    const int wolverineMovieId = 771193517;
+    
+    var wolverineMovies = rtClient.MoviesSimilar(wolverineMovieId);
+
+#### Browse new DVD releases
+
+    var rtClient = new RottenTomatoesRestClient("myApiKey");
+    
+    var newDvds = rtClient.NewReleaseDvds();
+
+#### And much more
+
+This wrapper supports every end point of the Rotten Tomatoes JSON API: http://developer.rottentomatoes.com/docs/read/JSON
+
+## Installation
+
+You can add the Rotten Tomatoes API to your project using the NuGet package manager: 
