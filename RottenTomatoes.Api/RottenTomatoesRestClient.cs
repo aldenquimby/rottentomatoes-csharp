@@ -148,7 +148,7 @@ namespace RottenTomatoes.Api
             {
                 foreach (var prop in urlSegments.GetType().GetProperties())
                 {
-                    request.AddUrlSegment(prop.Name, prop.GetValue(urlSegments).ToString());
+                    request.AddUrlSegment(prop.Name, prop.GetValue(urlSegments, null).ToString());
                 }
             }
 
@@ -156,7 +156,7 @@ namespace RottenTomatoes.Api
             {
                 foreach (var prop in urlParams.GetType().GetProperties())
                 {
-                    request.AddParameter(prop.Name, prop.GetValue(urlParams));
+                    request.AddParameter(prop.Name, prop.GetValue(urlParams, null));
                 }
             }
 

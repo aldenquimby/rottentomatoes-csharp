@@ -33,7 +33,7 @@ namespace RottenTomatoes.Api.Tests
         }
 
         [Test]
-        public void MoviesInfo()
+        public void MovieInfo()
         {
             var resp = _client.MovieInfo(MOVIE_ID);
 
