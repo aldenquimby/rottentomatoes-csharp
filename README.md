@@ -1,4 +1,11 @@
-rottentomatoes-csharp
+# Rotten Tomatoes REST API for .NET
+
 =====================
 
-Rotten Tomatoes REST API for .NET
+## Features
+
+features here.
+
+## Examples
+
+examples here.
