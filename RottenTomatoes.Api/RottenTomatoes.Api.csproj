@@ -7,8 +7,8 @@
     <ProjectGuid>{C86BE4EF-7065-43E7-983A-FEA05DB0BEE4}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>RottenTomatoesApi</RootNamespace>
-    <AssemblyName>RottenTomatoesApi</AssemblyName>
+    <RootNamespace>RottenTomatoes.Api</RootNamespace>
+    <AssemblyName>RottenTomatoes.Api</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -42,7 +42,6 @@
     <Compile Include="Constants.cs" />
     <Compile Include="Models.cs" />
     <Compile Include="Responses.cs" />
-    <Compile Include="Urls.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

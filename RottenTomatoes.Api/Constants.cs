@@ -1,4 +1,4 @@
-﻿namespace RottenTomatoesApi
+﻿namespace RottenTomatoes.Api
 {
     public enum ReviewType
     {
