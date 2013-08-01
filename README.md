@@ -26,8 +26,8 @@ A simple C# wrapper for the HTTP-based Rotten Tomatoes API, which you can learn 
 
 #### And much more
 
-This wrapper supports every end point of the Rotten Tomatoes JSON API: http://developer.rottentomatoes.com/docs/read/JSON
+This wrapper supports every end point of the <a href="http://developer.rottentomatoes.com/docs/read/JSON" target="_blank">Rotten Tomatoes JSON API</a>.
 
 ## Installation
 
-You can add the Rotten Tomatoes API to your project using the NuGet package manager: 
+You can add the Rotten Tomatoes API to your project using <a href="https://www.nuget.org/packages/RottenTomatoes.Api/" target="_blank">NuGet</a>. 
