@@ -38,6 +38,7 @@ namespace RottenTomatoes.Api.Tests
             var resp = _client.MovieInfo(MOVIE_ID);
 
             Assert.IsNotNull(resp);
+            Assert.IsNull(resp.Error);
         }
 
         [Test]
@@ -46,6 +47,7 @@ namespace RottenTomatoes.Api.Tests
             var resp = _client.MovieAlias(IMDB_MOVIE_ID);
 
             Assert.IsNotNull(resp);
+            Assert.IsNull(resp.Error);
         }
 
         [Test]

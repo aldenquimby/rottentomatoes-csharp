@@ -5,8 +5,8 @@ namespace RottenTomatoes.Api
     public interface IRottenTomatoesRestClient
     {
         MoviesResponse MoviesSearch(string query, int pageLimit = 30, int page = 1);
-        Movie MovieInfo(long movieId);
-        Movie MovieAlias(string id, AliasType type = AliasType.IMDB);
+        MovieResponse MovieInfo(long movieId);
+        MovieResponse MovieAlias(string id, AliasType type = AliasType.IMDB);
         ReviewsResponse MovieReviews(long movieId, ReviewType type = ReviewType.Top_Critic, int pageLimit = 20, int page = 1, string country = "us");
         MoviesResponse MovieSimilar(long movieId, int limit = 5);
         ClipsResponse MovieClips(long movieId);
@@ -43,17 +43,17 @@ namespace RottenTomatoes.Api
             return Execute<MoviesResponse>(request);
         }
 
-        public Movie MovieInfo(long movieId)
+        public MovieResponse MovieInfo(long movieId)
         {
             var request = CreateRequest("movies/{movieId}.json", new {movieId});
-            return Execute<Movie>(request);
+            return Execute<MovieResponse>(request);
         }
 
-        public Movie MovieAlias(string id, AliasType type = AliasType.IMDB)
+        public MovieResponse MovieAlias(string id, AliasType type = AliasType.IMDB)
         {
             var urlParams = new {id, type = type.ToString().ToLower()};
             var request = CreateRequest("movie_alias.json", urlParams: urlParams);
-            return Execute<Movie>(request);
+            return Execute<MovieResponse>(request);
         }
 
         public ReviewsResponse MovieReviews(long movieId, ReviewType type = ReviewType.Top_Critic, int pageLimit = 20, int page = 1, string country = "us")
